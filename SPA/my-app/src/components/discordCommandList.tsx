@@ -1,10 +1,11 @@
-import DiscordCommand from "./discordCommand"
+import { DiscordCommand } from "../models/discordCommand"
+import DiscordCommandComponent from "./discordCommandComponent"
 
-const DiscordCommandList = (discordCommandList : Array<any>) => {
+const DiscordCommandList = (discordCommandList : Array<DiscordCommand>) => {
 
     return (
         discordCommandList.forEach(element => {
-            <DiscordCommand props={element} />
+            <DiscordCommandComponent discordCommand={element} />
         })
     );
 };
