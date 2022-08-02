@@ -1,8 +1,8 @@
 
-function Header() {
+const Header = (title: string) => {
     return (
         <header>
-
+            {title}
         </header>
     );
 }

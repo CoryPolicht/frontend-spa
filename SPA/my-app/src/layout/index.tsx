@@ -1,7 +1,11 @@
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem, Switch } from '@chakra-ui/react'
+import { Component } from 'react';
+import { Outlet } from 'react-router-dom';
+import Navbar from './navbar';
 
-function Layout() {
+const Layout = () => {
     return (
+        //todo this should all be adaptive, but this whole componant will likely change
         <Grid h='500px' templateAreas={`"header header" "nav main" "nav footer"`}
             gridTemplateRows={'50px 1fr 30px'}
             gridTemplateColumns={'150px 1fr'}
@@ -10,10 +14,10 @@ function Layout() {
                 Header
             </GridItem>
             <GridItem pl='2' bg='cyan.100' area={'nav'}>
-                this is the nav bar
+                <Navbar />
             </GridItem>
             <GridItem pl='2' bg='teal.300' area={'main'}>
-                this is the main container
+                <Outlet />
             </GridItem>
 
             <GridItem pl='2' bg='green.300' area={'footer'}>
