@@ -1,7 +1,7 @@
-import { Grid, GridItem, Switch } from '@chakra-ui/react'
-import { Component } from 'react';
+import { Grid, GridItem } from '@chakra-ui/react'
 import { Outlet } from 'react-router-dom';
 import Navbar from './navbar';
+import Header from './header';
 
 const Layout = () => {
     return (
@@ -11,7 +11,7 @@ const Layout = () => {
             gridTemplateColumns={'150px 1fr'}
             gap='1'>
             <GridItem pl='2' bg='blue.100' area={'header'}>
-                Header
+                <Header title="1 Lit Fam" />
             </GridItem>
             <GridItem pl='2' bg='cyan.100' area={'nav'}>
                 <Navbar />
